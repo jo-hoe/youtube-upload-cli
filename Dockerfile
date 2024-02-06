@@ -5,8 +5,8 @@ RUN apk update && apk add --no-cache git go
 # Set the working directory inside the container
 WORKDIR /build
 
-RUN git clone https://github.com/porjo/youtubeuploader.git .
-RUN go build -o youtubeuploader cmd/youtubeuploader/main.go 
+RUN git clone --depth 1 https://github.com/porjo/youtubeuploader.git --branch 23.06 .
+RUN go build -o youtubeuploader /build/cmd/youtubeuploader/main.go
 
 # Use actual image to setup environment
 FROM alpine:latest
