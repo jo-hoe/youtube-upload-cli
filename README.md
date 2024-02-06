@@ -2,7 +2,7 @@
 
 [![Docker Build](https://github.com/jo-hoe/youtube-upload-cli/actions/workflows/docker-build-test.yml/badge.svg)](https://github.com/jo-hoe/youtube-upload-cli/actions?workflow=docker-build-test)
 
-Uses <https://github.com/porjo/youtubeuploader> to upload videos to YouTube via CLI in a docker container.
+Uses <https://github.com/porjo/youtubeuploader> to upload videos to YouTube in a docker container.
 
 ## Prerequisites
 
