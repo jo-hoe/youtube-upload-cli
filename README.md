@@ -40,3 +40,14 @@ You will need to perform you OAuth authentication in case you do not yet have th
 To create it you should expose the port 8080.
 This can be done by adding `-p 8080:8080` to the command above.
 After you can access <localhost:8080> to perform the authentication.
+
+## Caveats
+
+### Youtube Upload Limit
+
+Youtube limits the amount of calls you can do per day.
+One upload counts for 1.600 credit.
+And the default quota is 10.000 credits.
+It works out to ~6 video uploads per day.
+You can checkout your current quota [here](https://console.cloud.google.com/apis/api/youtube.googleapis.com/quotas).
+One may apply for a quota increase [here](https://support.google.com/youtube/contact/yt_api_form?hl=en-GB).
