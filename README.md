@@ -2,7 +2,7 @@
 
 [![Docker Build](https://github.com/jo-hoe/youtube-upload-cli/actions/workflows/docker-build-test.yml/badge.svg)](https://github.com/jo-hoe/youtube-upload-cli/actions?workflow=docker-build-test)
 
-Uses [youtubeuploader](https://github.com/porjo/youtubeuploader) to upload videos to youtube.
+Uses <https://github.com/porjo/youtubeuploader> to upload videos to youtube via CLI.
 
 ## Requirements
 
@@ -18,15 +18,16 @@ docker build -t youtube-upload-cli .
 
 see <https://github.com/porjo/youtubeuploader?tab=readme-ov-file#usage>
 
-## Run
+## Example how to run
 
 ```PowerShell
-docker run --rm -it ` 
-    --entrypoint "" ` 
-    -v <folder to your video>:/mnt/ ` 
-    -v <folder to your secret>:/mnt/secret_cache/ `
-    -v <folder to your output>:/opt/yt-uploader/workdir/ `
-    -p 8080:8080 ` 
+docker run --rm -it `
+    -v <folder to video file>:/mnt/ `
+    -v <folder to client_secret.json>:/home/ytuploader/.config/youtubeuploader/ `
     youtube-upload-cli `
-    youtubeuploader
+    -filename "/mnt/test.mp4" `
+    -title "My Title" `
+    -description "My description" `
+    -tags "tag1,tag2,tag3" `
+    -secrets client_secret.json
 ```
