@@ -10,7 +10,7 @@ Install the following:
 
 - [Docker](https://www.docker.com/)
 
-## Example how to run
+## How to use
 
 The example below is a `PowerShell` command.
 
