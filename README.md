@@ -31,3 +31,13 @@ docker run --rm -it `
     -tags "tag1,tag2,tag3" `
     -secrets client_secret.json
 ```
+
+### First run
+
+When running this first you have need the `client_secret.json` file.
+How to create it is outlined [here](https://github.com/porjo/youtubeuploader/tree/cfb08f55fffb6d19f1d49f8c8a8804d7bc0366a9#youtube-api).
+
+You will need to perform you OAuth authentication in case you do not yet have the `request.token` file.
+To create it you should expose the port 8080.
+This can be done by adding `-p 8080:8080` to the command above.
+After you can access <localhost:8080> to perform the authentication.
