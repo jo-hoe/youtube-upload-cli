@@ -1,22 +1,14 @@
-# Youtube Upload CLI
+# YouTube Upload CLI
 
 [![Docker Build](https://github.com/jo-hoe/youtube-upload-cli/actions/workflows/docker-build-test.yml/badge.svg)](https://github.com/jo-hoe/youtube-upload-cli/actions?workflow=docker-build-test)
 
-Uses <https://github.com/porjo/youtubeuploader> to upload videos to youtube via CLI.
+Uses <https://github.com/porjo/youtubeuploader> to upload videos to YouTube via CLI in a docker container.
 
-## Requirements
+## Prerequisites
+
+Install the following:
 
 - [Docker](https://www.docker.com/)
-
-## Build
-
-```PowerShell
-docker build -t youtube-upload-cli .
-```
-
-## Usage
-
-see <https://github.com/porjo/youtubeuploader?tab=readme-ov-file#usage>
 
 ## Example how to run
 
@@ -25,7 +17,7 @@ The example below is a `PowerShell` command.
 ```PowerShell
 docker run --rm -it `
     -v <folder to video file>:/mnt/ `
-    -v <folder to client_secret.json>:/home/ytuploader/.config/youtubeuploader/ `
+    -v <folder to client_secrets.json>:/home/ytuploader/.config/youtubeuploader/ `
     ghcr.io/jo-hoe/youtube-upload-cli:latest `
     -filename "/mnt/test.mp4" `
     -title "My Title" `
@@ -37,8 +29,8 @@ And below is the same command in `bash`.
 
 ```bash
 docker run --rm -it \
-    -v <folder to video file>:/mnt/ \
-    -v <folder to client_secret.json>:/home/ytuploader/.config/youtubeuploader/ \
+    -v <directory to video file>:/mnt/ \
+    -v <directory to client_secrets.json>:/home/ytuploader/.config/youtubeuploader/ \
     ghcr.io/jo-hoe/youtube-upload-cli:latest \
     -filename "/mnt/test.mp4" \
     -title "My Title" \
@@ -55,6 +47,10 @@ You will need to perform you OAuth authentication in case you do not yet have th
 To create it you should expose the port 8080.
 This can be done by adding `-p 8080:8080` to the command above.
 After you can access <localhost:8080> to perform the authentication.
+
+## CLI Commands
+
+For the complete list of commands see <https://github.com/porjo/youtubeuploader/tree/cfb08f55fffb6d19f1d49f8c8a8804d7bc0366a9#usage>
 
 ## Caveats
 
