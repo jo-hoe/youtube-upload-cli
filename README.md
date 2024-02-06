@@ -20,6 +20,8 @@ see <https://github.com/porjo/youtubeuploader?tab=readme-ov-file#usage>
 
 ## Example how to run
 
+The example below is a `PowerShell` command.
+
 ```PowerShell
 docker run --rm -it `
     -v <folder to video file>:/mnt/ `
@@ -29,6 +31,19 @@ docker run --rm -it `
     -title "My Title" `
     -description "My description" `
     -tags "tag1,tag2,tag3" `
+```
+
+And below is the same command in `bash`.
+
+```bash
+docker run --rm -it \
+    -v <folder to video file>:/mnt/ \
+    -v <folder to client_secret.json>:/home/ytuploader/.config/youtubeuploader/ \
+    ghcr.io/jo-hoe/youtube-upload-cli:latest \
+    -filename "/mnt/test.mp4" \
+    -title "My Title" \
+    -description "My description" \
+    -tags "tag1,tag2,tag3"
 ```
 
 ### First run
